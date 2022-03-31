@@ -2,6 +2,19 @@
 
 let map;
 
+let zipcode_selecter = document.getElementById("zipcode_select")
+let zipcode_selecter_value = zipcode_selecter.value
+let zipcode_Submit_Button = document.getElementById("submit_zipcode_button");
+zipcode_Submit_Button.addEventListener("click", api_calls);
+
+let get_apicredits_button = document.getElementById("submit_apicredits_button");
+get_apicredits_button.addEventListener("click", get_api_credits)
+
+document.getElementById('zipcode_select').onchange = function () {
+  zipcode_selecter_value = zipcode_selecter.value
+  console.log(zipcode_selecter_value)
+}
+
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 27.9496, lng: -82.4543 },
@@ -36,15 +49,10 @@ function initMap() {
   const z33684 = { lat: 27.99630600, lng: -82.49497300 };
   const z33687 = { lat: 28.02864000, lng: -82.39338500 };
   const z33694 = { lat: 28.08570400, lng: -82.50485900 };
-  const z33689 = { lat: 27.9496, lng: -82.4543 };
   const z33686 = { lat: 27.9473, lng: -82.4588 };
 
 
-  const marker = new google.maps.Marker({
-    position: z33689,
-    map,
-    title: "33689",
-  });
+
   const marker2 = new google.maps.Marker({
     position: z33686,
     map,
@@ -196,11 +204,58 @@ function initMap() {
     title: "33647",
   });
 
-  marker.addListener("click", () => {
+  marker2.addListener("click", () => {
     infowindow.open({
       anchor: marker,
       map,
       shouldFocus: false,
     });
   });
+}
+function get_api_credits() {
+  jQuery.ajax({
+    url: "https://www.rentometer.com/api/v1/auth",
+    type: "GET",
+    data: {
+      "api_key": "4_HAGZ7o7Sw6FUqagGVrOg",
+    },
+  })
+    .done(function (data, textStatus, jqXHR) {
+      console.log("HTTP Request Succeeded: " + jqXHR.status);
+      console.log(data);
+      alert("Testing fetching data from API \nmy account email is: " + data.account_email +
+        "\nand I have " + data.credits_remaining + " credits remaining!")
+
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+      console.log("HTTP Request Failed");
+    })
+    .always(function () {
+      /* ... */
+    });
+
+}
+function api_calls() {
+  jQuery.ajax({
+    url: "https://www.rentometer.com/api/v1/summary",
+    type: "GET",
+    data: {
+      "api_key": "4_HAGZ7o7Sw6FUqagGVrOg",
+      "address": zipcode_selecter_value,
+      "bedrooms": "2",
+      "baths": "1.5+",
+      "building_type": "apartment",
+    },
+  })
+    .done(function (data, textStatus, jqXHR) {
+      console.log("HTTP Request Succeeded: " + jqXHR.status);
+      console.log(data);
+      alert("Average rent for this zipcode is: " + data.mean + "$")
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+      console.log("HTTP Request Failed");
+    })
+    .always(function () {
+      /* ... */
+    });
 }
