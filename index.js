@@ -1,11 +1,18 @@
 
 
 let map;
+let lastyearavg;
+let thisyearavg;
+let pricechangepercent = 0;
 
 let zipcode_selecter = document.getElementById("zipcode_select")
 let zipcode_selecter_value = zipcode_selecter.value
 let zipcode_Submit_Button = document.getElementById("submit_zipcode_button");
+let zipcode_yeartrend_button = document.getElementById("submit_yeartrend_button");
 zipcode_Submit_Button.addEventListener("click", api_calls);
+zipcode_yeartrend_button.addEventListener("click", year_api_call1);
+zipcode_yeartrend_button.addEventListener("click", year_api_call2);
+zipcode_yeartrend_button.addEventListener("click", pricechange);
 
 let get_apicredits_button = document.getElementById("submit_apicredits_button");
 get_apicredits_button.addEventListener("click", get_api_credits)
@@ -203,10 +210,24 @@ function initMap() {
     map,
     title: "33647",
   });
-
-  marker2.addListener("click", () => {
+const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">33626</h1>' +
+    '<div id="bodyContent">' +
+    '<img src="https://th.bing.com/th/id/R.f8de8bd39e19a58d2839a16638951cc2?rik=i5Er7piO6IwbzQ&riu=http%3a%2f%2fpluto.matrix49.com%2f16386%2fsubpages%2fcourse+gallery%2fWestchase-Golf-Club-FL-hole-3a.jpg&ehk=5sntm4Nb3%2b2eIMJ2ff6DkDMVfZNX3kFJU0fq2bIKv3A%3d&risl=&pid=ImgRaw&r=0" width="200" height="125">'+ 
+    '<img src="https://th.bing.com/th/id/R.76529041cd674354d4445e4b34e5e911?rik=HcDXuyNG8CzB4g&riu=http%3a%2f%2fi1.wp.com%2fwww.lianejamason.com%2fwp-content%2fuploads%2f2010%2f11%2fwestchase-tampa-real-estate.jpg&ehk=GXZky8LcBwKBupWQyc%2bgcxjsok2B3vxu%2fbG6jLEwJ4U%3d&risl=&pid=ImgRaw&r=0" width="200" height="125">' +
+    "</div>" +
+    "</div>";
+  
+	
+	const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+  });
+  marker30.addListener("click", () => {
     infowindow.open({
-      anchor: marker,
+      anchor: marker30,
       map,
       shouldFocus: false,
     });
@@ -240,11 +261,12 @@ function api_calls() {
     url: "https://www.rentometer.com/api/v1/summary",
     type: "GET",
     data: {
-      "api_key": "4_HAGZ7o7Sw6FUqagGVrOg",
+      "api_key": "gMIZX7yK85rmOa8orJmeoA",
       "address": zipcode_selecter_value,
       "bedrooms": "2",
       "baths": "1.5+",
       "building_type": "apartment",
+      "look_back_days": 365,
     },
   })
     .done(function (data, textStatus, jqXHR) {
@@ -258,4 +280,76 @@ function api_calls() {
     .always(function () {
       /* ... */
     });
+}
+
+function year_api_call1() {
+  jQuery.ajax({
+    url: "https://www.rentometer.com/api/v1/summary",
+    type: "GET",
+    data: {
+      "api_key": "gMIZX7yK85rmOa8orJmeoA",
+      "address": zipcode_selecter_value,
+      "bedrooms": "2",
+      "baths": "1.5+",
+      "building_type": "apartment",
+      "look_back_days": 445,
+    },
+  })
+    .done(function (data, textStatus, jqXHR) {
+      console.log("HTTP Request Succeeded: " + jqXHR.status);
+      console.log(data);
+      lastyearavg = data.mean;
+      console.log(lastyearavg);
+      
+    
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+      console.log("HTTP Request Failed");
+    })
+    .always(function () {
+      /* ... */
+    });
+
+}
+function year_api_call2() {
+  jQuery.ajax({
+    url: "https://www.rentometer.com/api/v1/summary",
+    type: "GET",
+    data: {
+      "api_key": "gMIZX7yK85rmOa8orJmeoA",
+      "address": zipcode_selecter_value,
+      "bedrooms": "2",
+      "baths": "1.5+",
+      "building_type": "apartment",
+      "look_back_days": 90,
+    },
+  })
+    .done(function (data, textStatus, jqXHR) {
+      console.log("HTTP Request Succeeded: " + jqXHR.status);
+      console.log(data);
+      thisyearavg = data.mean;
+      console.log(thisyearavg);
+      pricechangepercent = thisyearavg/lastyearavg;
+      console.log(pricechangepercent);
+      pricechangepercent = ((pricechangepercent - 1) * 100);
+      console.log(pricechangepercent);
+
+      
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+      console.log("HTTP Request Failed");
+    })
+    .always(function () {
+      /* ... */
+    });
+    
+    
+}
+function sleep(time){
+  return new Promise((resolve)=>setTimeout(resolve,time)
+)
+}
+async function pricechange() {
+  await sleep(2000);
+  alert("Rental Change From Last Year is: " + pricechangepercent  + "%");
 }
