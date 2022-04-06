@@ -12,7 +12,7 @@
 
 <body>
     <h1 id="titlePage_heading">Sharking Rental Pricing</h1>
-    <div id="opening_statement">We price rental properties in the city of Tampa!!</div>
+    <div id="opening_statement">Rental Property Trends in Tampa, FL!</div>
     <br>
     <!-- <img src="downtownTampa.jpg" id="downtownTampa_Picture"> -->
     <br><br><br><br>
@@ -59,7 +59,26 @@
     </select>
     <button type="button" id="submit_zipcode_button">Submit For Rental Statics</button>
     <button type="button" id="submit_apicredits_button">Check API credits</button>
+	<button type="button" id="submit_yeartrend_button">Submit For Rental Trend in Last Year</button>
     <script src="index.js"> </script>
+    <?php
+    $x = 5;
+    $y = 10.5;
+    ?>
+    <?php
+$servername = "localhost";
+$username = "root";
+$password = "password";
+
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=rentalsitedb", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
+?>
 </body>
 
 </html>
