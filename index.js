@@ -24,8 +24,16 @@ document.getElementById('zipcode_select').onchange = function () {
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 27.9496, lng: -82.4543 },
-    zoom: 10,
+    center: { lat: 27.7567667, lng: -81.4639835 },
+    zoom: 7,
+    restriction: {
+       latLngBounds: {
+       north: 31.5,
+       south: 24,
+       east: -79,
+       west: -88,
+    },
+  },
   });
   const z33601 = { lat: 27.9475, lng: -82.4588 };
   const z33602 = { lat: 27.95364200, lng: -82.45657500 };
