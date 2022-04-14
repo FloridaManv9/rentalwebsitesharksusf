@@ -18,8 +18,8 @@ body {
 }
 
 #map {
-  height: 50%;
-  width: 50%;
+  height: 90%;
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -39,4 +39,16 @@ body {
 
 #select_zipcode_label{
   font-size: 15pt;
+}
+
+#col-btn{
+  background-color: black !important;
+}
+
+#offcanvas{
+  top: 56px !important;
+}
+
+.p-4 {
+    padding: 0px !important;
 }
