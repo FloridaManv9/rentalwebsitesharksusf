@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sharking Rental Pricing</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="sharking_site_CSS.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Jl2sTCpedr_HR5yacnbBSa0cMXwQndDh0XmyNHKUhnilfykXifwVp1qQXO0bMEAXxCdrm9VjJ7ZoZmM6wJipXiDI8AucK-hO5j1hGl3J9oo" charset="UTF-8"></script><style>
+		  .bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		  }
+
+		  @media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+			  font-size: 3.5rem;
+			}
+		  }
+		</style>
+
+
+</head>
+
+<body>
+	<nav nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+      <a class="navbar-brand" href="SharkingRentalSite HTML.html">Rental Shark</a>
+	  <ul class="navbar-nav ms-auto">
+		<li class="nav-item active">
+		  <a class="nav-link" href="Contact-Us.html">Contact Us</a>
+		  
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="About-Us.html">About Us</a>
+		</li>
+	  </ul>
+</nav>
+    <div class="container py-4">   
+		<div class="p-5 mb-4 bg-light rounded-3">
+		  <div class="container-fluid py-5">
+			<h1 class="display-5 fw-bold">Custom jumbotron</h1>
+			<p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+			<button class="btn btn-primary btn-lg" type="button">Example button</button>
+		  </div>
+		</div>
+	</div>
+ 
+    
+	
+    <?php
+    $x = 5;
+    $y = 10.5;
+    ?>
+    <?php
+$servername = "localhost";
+$username = "root";
+$password = "password";
+
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=rentalsitedb", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
+?>
+</body>
+
+</html>
