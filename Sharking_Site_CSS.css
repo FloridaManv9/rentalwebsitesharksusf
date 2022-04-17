@@ -109,3 +109,9 @@ body {
 .char_remaining {
   text-align: center;
 }
+
+#contact_us_headingTitle {
+  margin-left: 480px;
+  font-size: 22px;
+
+}
