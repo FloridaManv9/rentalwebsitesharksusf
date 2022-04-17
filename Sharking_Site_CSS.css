@@ -1,17 +1,19 @@
 body {
-    background-color: #a2dae9
+  background-color: #a2dae9
 }
 
-#opening_statement{
-    font-size: 20pt;
-    text-align: center;
+#opening_statement {
+  font-size: 20pt;
+  text-align: center;
 }
-#titlePage_heading{
-    text-align: center;
+
+#titlePage_heading {
+  text-align: center;
 }
-#downtownTampa_Picture{
-    display: block;
-    margin-left: auto;
+
+#downtownTampa_Picture {
+  display: block;
+  margin-left: auto;
   margin-right: auto;
   height: 300pt;
   width: 600pt;
@@ -33,22 +35,77 @@ body {
   padding: 0;
 }
 
-#submit_zipcode_button{
+#submit_zipcode_button {
   margin-left: 5pt;
 }
 
-#select_zipcode_label{
+#select_zipcode_label {
   font-size: 15pt;
 }
 
-#col-btn{
+#col-btn {
   background-color: black !important;
 }
 
-#offcanvas{
+#offcanvas {
   top: 56px !important;
 }
 
 .p-4 {
-    padding: 0rem!important;
+  padding: 0rem !important;
+}
+
+#contact_us_heading {
+  text-align: center;
+}
+
+#our_email_address {
+  text-align: center;
+  font-size: 26px;
+}
+
+#contact_us_email_linebreak {
+  border: 6px solid blue;
+  border-radius: 5px;
+}
+
+#ticket_textbox {
+  width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+  margin-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ticket_textbox_label {
+  margin-left: 340px;
+  font-style: oblique;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#issues_button {
+  margin-left: 160px;
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  margin-top: -50px;
+}
+
+#business_inquiries {
+  margin-left: 600px;
+  font-style: italic;
+}
+
+.char_remaining {
+  text-align: center;
 }
