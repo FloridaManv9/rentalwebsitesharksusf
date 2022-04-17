@@ -65,8 +65,7 @@ body {
 }
 
 #contact_us_email_linebreak {
-  border: 6px solid blue;
-  border-radius: 5px;
+  border-color: black;
 }
 
 #ticket_textbox {
