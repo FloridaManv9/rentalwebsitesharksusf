@@ -7,5 +7,20 @@
 }
 
 @media (min-width: 992px) {
-  .rounded-lg-3 { border-radius: .3rem; }
+  .rounded-lg-3 {
+    border-radius: .3rem;
+  }
+}
+
+#about_us_headingTitle {
+  margin-left: 475px;
+}
+
+#about_us_summary_title {
+  text-align: left;
+  font-size: 30px;
+}
+
+#hr_break {
+  border-color: black;
 }
