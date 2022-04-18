@@ -18,9 +18,17 @@
 
 #about_us_summary_title {
   text-align: left;
-  font-size: 30px;
 }
 
-#hr_break {
+.hr_break {
   border-color: black;
+}
+
+#picture_trenton {
+
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin-left: 700px;
 }
