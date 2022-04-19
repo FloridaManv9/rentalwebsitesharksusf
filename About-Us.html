@@ -34,30 +34,38 @@
 
 <body>
 	<nav nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-		<a class="navbar-brand" href="SharkingRentalSite HTML.html" style="margin-left: 1rem">Rental Shark</a>
-		<span id="about_us_headingTitle" class="navbar-brand text-center">About Us</span>
-		<ul class="navbar-nav ms-auto">
-			<li class="nav-item active">
-				<a class="nav-link" href="Contact-Us.html">Contact Us</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="About-Us.html">About Us</a>
-			</li>
-			<li class="nav-item">
-				<button class="btn float-end" id="col-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-					role="button">
-					<i class="bi bi-arrow-right-square-fill fs-3" data-bs-toggle="offcanvas"
-						data-bs-target="#offcanvas"></i>
-				</button>
-			</li>
-		</ul>
+		<div class="container-fluid">
+			<a class="navbar-brand" href="SharkingRentalSite HTML.html" style="margin-left: 1rem">Rental Shark</a>
+			<span id="about_us_headingTitle" class="navbar-brand ms-auto">About Us</span>
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="Contact-Us.html">Contact Us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="About-Us.html">About Us</a>
+				</li>
+				<li class="nav-item">
+					<button class="btn float-end" id="col-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+						role="button">
+						<i class="bi bi-arrow-right-square-fill fs-3" data-bs-toggle="offcanvas"
+							data-bs-target="#offcanvas"></i>
+					</button>
+				</li>
+			</ul>
+		</div>
 	</nav>
-	<br>
-
+	<div class="container py-4 mx-0">   
+		<div class="p-5 mb-4 bg-light rounded-3 vw-100">
+		  <div class="container-fluid py-5 w-auto">
+			<h1 class="display-5 fw-bold">About Rental Shark</h1>
+			<p class="col-md-8 fs-4">Rental Shark is an apartment rental utility that compiles data from multiple sources to give you
+			an idea about the rental prices in your area. </p>
+		  </div>
+		</div>
+	</div>
 
 	<div class="container-fluid" id="about_us_summary_title">
-		<h2 class="display-5 fw-bold">Information about the developers of
-			Rental Shark</h2>
+		<h2 class="display-5 fw-bold">Introducing the Developers</h2>
 	</div>
 	<hr class="hr_break">
 
@@ -72,15 +80,25 @@
 					semester
 					to finish with my bachelor's degree. I currently work full time as a lead in a warehouse position.
 				</p>
-				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
-					<button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-					<button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
-				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="b-example-divider"></div>
+	<div class="divider"></div>
+
+	<div class="container col-xxl-8 px-4 py-5">
+		<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+			<div class="col-10 col-sm-8 col-lg-6">
+				<img src="" class="d-block w-100" alt="...">
+			</div>
+			<div class="col-lg-6">
+				<h1 class="display-5 fw-bold lh-1 mb-3">Brian Andruskiewicz</h1>
+				<p class="lead">Current student at USF with a major in Information Technology. This is my last semester until I earn
+				my bachelor's degree. Currently working full time in an IT position.
+				</p>
+			</div>
+		</div>
+	</div>
 
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
