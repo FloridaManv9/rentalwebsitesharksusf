@@ -71,7 +71,6 @@ function initMap() {
   const m_Jacksonville = new google.maps.Marker({
     position: Jacksonville,
     map,
-    icon: "JacksonvillePicture.jpg",
     title: "Jacksonville",
   });
   const m_Miami = new google.maps.Marker({
@@ -82,7 +81,6 @@ function initMap() {
   const m_Tampa = new google.maps.Marker({
     position: Tampa,
     map,
-    icon: "TampaBayPicture.jpg",
     title: "Tampa",
   });
   const m_Orlando = new google.maps.Marker({
