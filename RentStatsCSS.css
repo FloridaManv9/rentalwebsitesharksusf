@@ -1,0 +1,29 @@
+#rent_stats_table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#rent_stats_table td,
+#rent_stats_table th {
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+
+#rent_stats_table:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+#rent_stats_table tr:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+#rent_stats_table th {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: center;
+    background-color: #0275d8;
+    color: white;
+}

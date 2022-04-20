@@ -31,7 +31,7 @@ function initMap() {
         north: 34.5,
         south: 24,
         east: -75,
-        west: -88,
+        west: -89,
       },
     },
   });
@@ -43,13 +43,9 @@ function initMap() {
   const Hialeah = { lat: 25.8576, lng: -80.2781 };
   const PortStLucie = { lat: 27.3, lng: -80.4 };
   const Tallahasse = { lat: 30.46, lng: -84.28 };
-  const CapeCoral = { lat: 26.6, lng: -82.0 };
   const FortLauderdale = { lat: 26.1, lng: -80.1 };
-  const PembrokePines = { lat: 26.0078, lng: -80.2963 };
   const Hollywood = { lat: 26.0, lng: -80.2 };
-  const Miramar = { lat: 25.9861, lng: -80.3036 };
   const Gainesville = { lat: 29.7, lng: -82.3 };
-  const CoralSprings = { lat: 26.2712, lng: -80.2706 };
   const LehighAcres = { lat: 26.6253, lng: -81.6248 };
   const Clearwater = { lat: 27.9659, lng: -82.8001 };
   const Brandon = { lat: 27.9378, lng: -82.2859 };
@@ -63,7 +59,9 @@ function initMap() {
   const Ocala = { lat: 29.1872, lng: -82.1401 };
   const DaytonaBeach = { lat: 29.2108, lng: -81.0228 };
   const StAugustine = { lat: 29.9012, lng: -81.3124 };
-  const PanamaCity = { lat: 8.9824, lng: -79.5199 };
+  const PanamaCity = { lat: 30.1588, lng: -85.6602 };
+  const Pensacola = { lat: 30.4213, lng: -87.2169 };
+  const FortMyers = { lat: 26.6406, lng: -81.8723 };
 
 
 
@@ -108,40 +106,20 @@ function initMap() {
     map,
     title: "Tallahasse",
   });
-  const m_CapeCoral = new google.maps.Marker({
-    position: CapeCoral,
-    map,
-    title: "CapeCoral",
-  });
   const m_FortLauderdale = new google.maps.Marker({
     position: FortLauderdale,
     map,
     title: "FortLauderdale",
-  });
-  const m_PembrokePines = new google.maps.Marker({
-    position: PembrokePines,
-    map,
-    title: "PembrokePines",
   });
   const m_Hollywood = new google.maps.Marker({
     position: Hollywood,
     map,
     title: "Hollywood",
   });
-  const m_Miramar = new google.maps.Marker({
-    position: Miramar,
-    map,
-    title: "Miramar",
-  });
   const m_Gainesville = new google.maps.Marker({
     position: Gainesville,
     map,
     title: "Gainesville",
-  });
-  const m_CoralSprings = new google.maps.Marker({
-    position: CoralSprings,
-    map,
-    title: "CoralSprings",
   });
   const m_LehighAcres = new google.maps.Marker({
     position: LehighAcres,
@@ -213,7 +191,16 @@ function initMap() {
     map,
     title: "PanamaCity",
   });
-
+  const m_Pensacola = new google.maps.Marker({
+    position: Pensacola,
+    map,
+    title: "Pensacola",
+  });
+  const m_FortMyers = new google.maps.Marker({
+    position: FortMyers,
+    map,
+    title: "FortMyers",
+  });
 
   const info_Jacksonville =
     '<div id="content">' +
@@ -317,17 +304,6 @@ function initMap() {
     "</div>";
 
 
-  const info_CapeCoral =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Cape Coral</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Cape Coral is a city located in Lee County, Florida, United States, on the Gulf of Mexico. Founded in 1957 and developed as a planned community, the city's population has grown to 194,016 as of the 2020 Census, a rise of 26% from the 2010 Census, making it the 117th most populous city in the United States." +
-    "Source: https://en.wikipedia.org/wiki/Cape_Coral,_Florida</p >"
-  "</div>" +
-    "</div>";
-
 
   const info_FortLauderdale =
     '<div id="content">' +
@@ -341,16 +317,7 @@ function initMap() {
     "</div>";
 
 
-  const info_PembrokePines =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Pembroke Pines</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Pembroke Pines is a city in southern Broward County, Florida, United States. The city is located 22 miles (35 km) north of Miami. The population of Pembroke Pines is 171,178 as of the 2020 census." +
-    "Source: https://en.wikipedia.org/wiki/Pembroke_Pines,_Florida</p >"
-  "</div>" +
-    "</div>";
+
 
 
   const info_Hollywood =
@@ -365,17 +332,6 @@ function initMap() {
     "</div>";
 
 
-  const info_Miramar =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Miramar</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Miramar is a city in southern Broward County, Florida, United States. As of the 2020 census, the population was 134,721. It is a principal city of the Miami metropolitan area, which is home to approximately six million people." +
-    "Source: https://en.wikipedia.org/wiki/Miramar,_Florida</p >"
-  "</div>" +
-    "</div>";
-
 
   const info_Gainesville =
     '<div id="content">' +
@@ -389,23 +345,13 @@ function initMap() {
     "</div>";
 
 
-  const info_CoralSprings =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Coral Springs</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Coral Springs, officially the City of Coral Springs, is a city in Broward County, Florida, United States, approximately 20 miles (32 km) northwest of Fort Lauderdale. As of the 2010 United States Census, the city had a population of 121,096.[" +
-    "Source: https://en.wikipedia.org/wiki/Coral_Springs,_Florida</p >"
-  "</div>" +
-    "</div>";
 
 
   const info_LehighAcres =
     '<div id="content">' +
     '<div id="siteNotice">' +
     "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Coral Springs</h1>' +
+    '<h1 id="firstHeading" class="firstHeading">Lehigh Acres</h1>' +
     '<div id="bodyContent">' +
     "<p>Lehigh Acres is an unincorporated area and census-designated place (CDP) in Lee County, Florida, United States. As of the 2010 census the population was 86,784,[4] and as of 2017 the population was estimated to be over 124,000." +
     "Source: https://en.wikipedia.org/wiki/Lehigh_Acres,_Florida</p >"
@@ -417,7 +363,7 @@ function initMap() {
     '<div id="content">' +
     '<div id="siteNotice">' +
     "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Coral Springs</h1>' +
+    '<h1 id="firstHeading" class="firstHeading">Clearwater</h1>' +
     '<div id="bodyContent">' +
     "<p>Clearwater is a city located in Pinellas County, Florida, United States, northwest of Tampa and St. Petersburg. To the west of Clearwater lies the Gulf of Mexico and to the southeast lies Tampa Bay. As of the 2010 census, the city had a population of 107,685." +
     "Source: https://en.wikipedia.org/wiki/Clearwater,_Florida</p >"
@@ -680,20 +626,6 @@ function initMap() {
   //Tallahasse Info Window
 
 
-  //CapeCoral Info Window
-  const infowindow_CapeCoral = new google.maps.InfoWindow({
-    content: info_CapeCoral,
-  });
-  m_CapeCoral.addListener("click", () => {
-    infowindow_CapeCoral.open({
-      anchor: m_CapeCoral,
-      map,
-      shouldFocus: false,
-    });
-  })
-  //CapeCoral Info Window
-
-
   //FortLauderdale Info Window
   const infowindow_FortLauderdale = new google.maps.InfoWindow({
     content: info_FortLauderdale,
@@ -708,18 +640,7 @@ function initMap() {
   //FortLauderdale Info Window
 
 
-  //PembrokePines Info Window
-  const infowindow_PembrokePines = new google.maps.InfoWindow({
-    content: info_PembrokePines,
-  });
-  m_PembrokePines.addListener("click", () => {
-    infowindow_PembrokePines.open({
-      anchor: m_PembrokePines,
-      map,
-      shouldFocus: false,
-    });
-  });
-  //PembrokePines Info Window
+
 
 
   //Hollywood Info Window
@@ -735,18 +656,6 @@ function initMap() {
   });
 
 
-  //Miramar Info Window
-  const infowindow_Miramar = new google.maps.InfoWindow({
-    content: info_Miramar,
-  });
-  m_Miramar.addListener("click", () => {
-    infowindow_Miramar.open({
-      anchor: m_Miramar,
-      map,
-      shouldFocus: false,
-    });
-  });
-  //Miramar Info Window
 
 
   //Gainesville Info Window
@@ -763,18 +672,6 @@ function initMap() {
   //Gainesville Info Window
 
 
-  //CoralSprings Info Window
-  const infowindow_CoralSprings = new google.maps.InfoWindow({
-    content: info_CoralSprings,
-  });
-  m_CoralSprings.addListener("click", () => {
-    infowindow_CoralSprings.open({
-      anchor: m_CoralSprings,
-      map,
-      shouldFocus: false,
-    });
-  });
-  //CoralSprings Info Window
 
 
   //LehighAcres Info Window

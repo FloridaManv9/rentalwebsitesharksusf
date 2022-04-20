@@ -87,6 +87,9 @@
 				<li class="nav-item">
 					<a class="nav-link" href="About-Us.html">About Us</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="RentStats.html">Rent Statisics</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
@@ -101,30 +104,13 @@
 			</div>
 		</div>
 
-		<script src="index.js"> </script>
+
 	</div>
 
 
 
+	<script src="index.js"> </script>
 
-	<?php
-    $x = 5;
-    $y = 10.5;
-    ?>
-	<?php
-$servername = "localhost";
-$username = "root";
-$password = "password";
-
-try {
-  $conn = new PDO("mysql:host=$servername;dbname=rentalsitedb", $username, $password);
-  // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully";
-} catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
-}
-?>
 </body>
 
 </html>
