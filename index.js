@@ -208,12 +208,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Jacksonville</h1>' +
     '<div id="bodyContent">' +
-    "<p>Jacksonville is a city located on the Atlantic coast of Florida, the most populous city in the state, and is" +
-    "the largest city by area in the contiguous United States as of 2020. It is the seat of Duval County," +
-    "with which the city government consolidated in 1968. Consolidation gave Jacksonville" +
-    "its great size and placed most of its metropolitan population within the city" +
-    "limits.As of 2020, Jacksonville's population is 949,611, making it the 12th most populous city in the U.S." +
-    " Source: https://en.wikipedia.org/wiki/Jacksonville,_Florida</p > "
+    "<p>Average Rent</p>  \n <p>0 bedroom: $746</p> \n <p>1 bedroom: $921</p> \n <p>2 bedroom: $1113</p> \n <p>3 bedroom: $1455 </p> \n" +
+    "<p>4 bedroom: $1852</p>"
   "</div>" +
     "</div>";
 
@@ -224,10 +220,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Miami</h1>' +
     '<div id="bodyContent">' +
-    "<p>Miami, officially the City of Miami, is a coastal metropolis located in Miami-Dade County in southeastern Florida" +
-    "(United States).With a population of 442, 241 as of the 2020 census, [2] it is the second - most populous" +
-    "city in Florida, eleventh - most populous city in the Southeast, and 44th - most populous city in the United States." +
-    "Source: https://en.wikipedia.org/wiki/Miami</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $1057</p> \n <p>1 bedroom: $1231</p> \n <p>2 bedroom: $1551</p> \n <p>3 bedroom: $2068 </p> \n" +
+    "<p>4 bedroom: $2483</p>"
   "</div>" +
     "</div>";
 
@@ -238,8 +232,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Tampa</h1>' +
     '<div id="bodyContent">' +
-    "<p>Tampa is a major city on the Gulf Coast of the U.S. state of Florida. The city's borders include the north shore of Tampa Bay and the east shore of Old Tampa Bay. Tampa is the largest city in the Tampa Bay area and the seat of Hillsborough County. With a population of 384,959 according to the 2020 census, Tampa is the third-most populated city in Florida after Jacksonville and Miami and is the 52nd most populated city in the United States." +
-    "Source: https://en.wikipedia.org/wiki/Tampa,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
+    "<p>4 bedroom: $2028</p>"
   "</div>" +
     "</div>";
 
@@ -250,8 +244,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Orlando</h1>' +
     '<div id="bodyContent">' +
-    "<p>Orlando is a city in the U.S. state of Florida and is the county seat of Orange County. In Central Florida, it is the center of the Orlando metropolitan area, which had a population of 2,509,831, according to U.S. Census Bureau figures released in July 2017, making it the 23rd-largest metropolitan area in the United States, the sixth-largest metropolitan area in the Southern United States, and the third-largest metropolitan area in Florida behind Miami and Tampa." +
-    "Source: https://en.wikipedia.org/wiki/Orlando,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $1055</p> \n <p>1 bedroom: $1140</p> \n <p>2 bedroom: $1321</p> \n <p>3 bedroom: $1713 </p> \n" +
+    "<p>4 bedroom: $2057</p>"
   "</div>" +
     "</div>";
 
@@ -262,8 +256,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">St.Petersburg</h1>' +
     '<div id="bodyContent">' +
-    "<p>St. Petersburg is a city in Pinellas County, Florida, United States. As of the 2020 census estimate, the population was 271,842, making it the fifth-most populous city in Florida, the second-largest city in the Tampa Bay Area, after Tampa, and the largest in the state that is not a county seat (the city of Clearwater is the seat of Pinellas County)." +
-    "Source: https://en.wikipedia.org/wiki/St._Petersburg,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
+    "<p>4 bedroom: $2028</p>"
   "</div>" +
     "</div>";
 
@@ -274,8 +268,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Hialeah</h1>' +
     '<div id="bodyContent">' +
-    "<p>Hialeah is a city in Miami-Dade County, Florida, United States. With a population of 223,109 as of the 2020 census, Hialeah is the sixth-largest city in Florida. It is a principal city of the Miami metropolitan area, which was home to an estimated 6,198,782 people at the 2018 census." +
-    "Source: https://en.wikipedia.org/wiki/Hialeah,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $1057</p> \n <p>1 bedroom: $1231</p> \n <p>2 bedroom: $1551</p> \n <p>3 bedroom: $2068 </p> \n" +
+    "<p>4 bedroom: $2483</p>"
   "</div>" +
     "</div>";
 
@@ -286,8 +280,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Port St. Lucie</h1>' +
     '<div id="bodyContent">' +
-    "<p>Port St. Lucie is a city in St. Lucie County, Florida, United States. It is the most populous municipality in the county with a population of 204,851 at the 2020 census. It is located 125 miles (201 km) southeast of Orlando and 113 miles (182 km) north of Miami." +
-    "Source: https://en.wikipedia.org/wiki/Port_St._Lucie,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $926</p> \n <p>1 bedroom: $932</p> \n <p>2 bedroom: $1211</p> \n <p>3 bedroom: $1618 </p> \n" +
+    "<p>4 bedroom: $1830</p>"
   "</div>" +
     "</div>";
 
@@ -298,8 +292,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Tallahasse</h1>' +
     '<div id="bodyContent">' +
-    "<p>Tallahassee is the capital city of the U.S. state of Florida. It is the county seat and only incorporated municipality in Leon County. Tallahassee became the capital of Florida, then the Florida Territory, in 1824. In 2020, the population was 196,169, making it the 8th-largest city in the U.S state of Florida, and the 126th-largest city in the United States." +
-    "Source: https://en.wikipedia.org/wiki/Tallahassee,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $778</p> \n <p>1 bedroom: $843</p> \n <p>2 bedroom: $1024</p> \n <p>3 bedroom: $1361 </p> \n" +
+    "<p>4 bedroom: $1484</p>"
   "</div>" +
     "</div>";
 
@@ -311,8 +305,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Fort Lauderdale</h1>' +
     '<div id="bodyContent">' +
-    "<p>Fort Lauderdale is a coastal city located in the U.S. state of Florida, 25 miles (40 km) north of Miami along the Atlantic Ocean. It is the county seat and largest city in Broward County with a population of 182,760 as of the 2020 Census making it the tenth largest city in Florida." +
-    "Source: https://en.wikipedia.org/wiki/Fort_Lauderdale,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $1059</p> \n <p>1 bedroom: $1198</p> \n <p>2 bedroom: $1510</p> \n <p>3 bedroom: $2161 </p> \n" +
+    "<p>4 bedroom: $2614</p>"
   "</div>" +
     "</div>";
 
@@ -326,8 +320,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Hollywood</h1>' +
     '<div id="bodyContent">' +
-    "<p>Hollywood is a city in southern Broward County, Florida, United States, located between Fort Lauderdale and Miami.[5] As of July 1, 2019, Hollywood had a population of 154,817." +
-    "Source: https://en.wikipedia.org/wiki/Hollywood,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $1059</p> \n <p>1 bedroom: $1198</p> \n <p>2 bedroom: $1510</p> \n <p>3 bedroom: $2161 </p> \n" +
+    "<p>4 bedroom: $2614</p>"
   "</div>" +
     "</div>";
 
@@ -339,8 +333,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Gainesville</h1>' +
     '<div id="bodyContent">' +
-    "<p>Gainesville is the county seat of Alachua County, Florida, and the largest city in North Central Florida, with a population of 141,085 in 2020.[6] It is the principal city of the Gainesville metropolitan area, which had a population of 339,247 in 2020." +
-    "Source: https://en.wikipedia.org/wiki/Gainesville,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $805</p> \n <p>1 bedroom: $897</p> \n <p>2 bedroom: $1083</p> \n <p>3 bedroom: $1415 </p> \n" +
+    "<p>4 bedroom: $1469</p>"
   "</div>" +
     "</div>";
 
@@ -353,8 +347,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Lehigh Acres</h1>' +
     '<div id="bodyContent">' +
-    "<p>Lehigh Acres is an unincorporated area and census-designated place (CDP) in Lee County, Florida, United States. As of the 2010 census the population was 86,784,[4] and as of 2017 the population was estimated to be over 124,000." +
-    "Source: https://en.wikipedia.org/wiki/Lehigh_Acres,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $931</p> \n <p>1 bedroom: $951</p> \n <p>2 bedroom: $1197</p> \n <p>3 bedroom: $1559 </p> \n" +
+    "<p>4 bedroom: $1762</p>"
   "</div>" +
     "</div>";
 
@@ -365,8 +359,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Clearwater</h1>' +
     '<div id="bodyContent">' +
-    "<p>Clearwater is a city located in Pinellas County, Florida, United States, northwest of Tampa and St. Petersburg. To the west of Clearwater lies the Gulf of Mexico and to the southeast lies Tampa Bay. As of the 2010 census, the city had a population of 107,685." +
-    "Source: https://en.wikipedia.org/wiki/Clearwater,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
+    "<p>4 bedroom: $2028</p>"
   "</div>" +
     "</div>";
 
@@ -377,8 +371,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Brandon</h1>' +
     '<div id="bodyContent">' +
-    "<p>Brandon is an unincorporated community and census-designated place (CDP) in Hillsborough County, Florida, United States. It is part of the Tampa–St. Petersburg–Clearwater Metropolitan Statistical Area. The population was 114,626 at the 2020 census,[5] up from 103,483 at the 2010 census." +
-    "Source: https://en.wikipedia.org/wiki/Brandon,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
+    "<p>4 bedroom: $2028</p>"
   "</div>" +
     "</div>";
 
@@ -389,8 +383,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Palmbay</h1>' +
     '<div id="bodyContent">' +
-    "<p>Palm Bay is a city in Brevard County, Florida, United States. The city's population was 119,760 at the 2020 United States Census, making it the most populous city in the county and the largest by land mass." +
-    "Source: https://en.wikipedia.org/wiki/Palm_Bay,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $759</p> \n <p>1 bedroom: $921</p> \n <p>2 bedroom: $1134</p> \n <p>3 bedroom: $1525 </p> \n" +
+    "<p>4 bedroom: $1826</p>"
   "</div>" +
     "</div>";
 
@@ -401,8 +395,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Springhill</h1>' +
     '<div id="bodyContent">' +
-    "<p>Spring Hill is a census-designated place (CDP) in Hernando County, Florida, United States. The population was 98,621 at the 2010 census, up from 69,078 at the 2000 census." +
-    "Source: https://en.wikipedia.org/wiki/Spring_Hill,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
+    "<p>4 bedroom: $2028</p>"
   "</div>" +
     "</div>";
 
@@ -413,8 +407,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Pompano Beach</h1>' +
     '<div id="bodyContent">' +
-    "<p>Pompano Beach is a city in Broward County, Florida, United States, along the coast of the Atlantic Ocean, just north of Fort Lauderdale. The nearby Hillsboro Inlet forms part of the Atlantic Intracoastal Waterway. As of the 2020 census, the city's population was 112,046." +
-    "Source: https://en.wikipedia.org/wiki/Pompano_Beach,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $1059</p> \n <p>1 bedroom: $1198</p> \n <p>2 bedroom: $1510</p> \n <p>3 bedroom: $2161 </p> \n" +
+    "<p>4 bedroom: $2614</p>"
   "</div>" +
     "</div>";
 
@@ -425,8 +419,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">West Palm Beach</h1>' +
     '<div id="bodyContent">' +
-    "<p>West Palm Beach is a city in and the county seat of Palm Beach County, Florida, United States.[6] It is located immediately to the west of the adjacent Palm Beach, which is situated on a barrier island across the Lake Worth Lagoon. The population was 117,415 at the 2020 census." +
-    "Source: https://en.wikipedia.org/wiki/West_Palm_Beach,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $983</p> \n <p>1 bedroom: $1180</p> \n <p>2 bedroom: $1468</p> \n <p>3 bedroom: $1984 </p> \n" +
+    "<p>4 bedroom: $2387</p>"
   "</div>" +
     "</div>";
 
@@ -437,8 +431,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Lakeland</h1>' +
     '<div id="bodyContent">' +
-    "<p>Lakeland is a city in Polk County, Florida, part of the Tampa Bay Area, located along Interstate 4 east of Tampa. According to the 2020 U.S. Census Bureau release, the city had a population of 112,641." +
-    "Source: https://en.wikipedia.org/wiki/Lakeland,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $794</p> \n <p>1 bedroom: $799</p> \n <p>2 bedroom: $1023</p> \n <p>3 bedroom: $1375 </p> \n" +
+    "<p>4 bedroom: $1764</p>"
   "</div>" +
     "</div>";
 
@@ -449,8 +443,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Riverview</h1>' +
     '<div id="bodyContent">' +
-    "<p>Riverview is an unincorporated census-designated place in Hillsborough County, Florida, United States. It is located south of Brandon. " +
-    "Source: https://en.wikipedia.org/wiki/Riverview,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
+    "<p>4 bedroom: $2028</p>"
   "</div>" +
     "</div>";
 
@@ -461,8 +455,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Boca Raton</h1>' +
     '<div id="bodyContent">' +
-    "<p>Boca Raton is a city in southern Palm Beach County, Florida. It was first incorporated on August 2, 1924, as Bocaratone, and then incorporated as Boca Raton in 1925. At the 2020 census, the population was 97,422." +
-    "Source: https://en.wikipedia.org/wiki/Boca_Raton,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $983</p> \n <p>1 bedroom: $1180</p> \n <p>2 bedroom: $1468</p> \n <p>3 bedroom: $1984 </p> \n" +
+    "<p>4 bedroom: $2387</p>"
   "</div>" +
     "</div>";
 
@@ -473,8 +467,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Ocala</h1>' +
     '<div id="bodyContent">' +
-    "<p>Ocala is a city in and the county seat of Marion County within the northern region of Florida, United States.[3] As of the 2020 United States Census, the city's population was 63,591, making it the 54th most populated city in Florida" +
-    "Source: https://en.wikipedia.org/wiki/Ocala,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $692</p> \n <p>1 bedroom: $757</p> \n <p>2 bedroom: $939</p> \n <p>3 bedroom: $1266 </p> \n" +
+    "<p>4 bedroom: $1356</p>"
   "</div>" +
     "</div>";
 
@@ -485,8 +479,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Daytona Beach</h1>' +
     '<div id="bodyContent">' +
-    "<p>Daytona Beach or simply Daytona is a city in Volusia County, Florida, United States. It lies approximately 51 miles (82.1 km) northeast of Orlando, 86 miles (138.4 km) southeast of Jacksonville, and 265 miles (426.5 km) northwest of Miami. As of the 2020 census, it had a population of 72,647." +
-    "Source: https://en.wikipedia.org/wiki/Daytona_Beach,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $693</p> \n <p>1 bedroom: $856</p> \n <p>2 bedroom: $1050</p> \n <p>3 bedroom: $1406 </p> \n" +
+    "<p>4 bedroom: $1537</p>"
   "</div>" +
     "</div>";
 
@@ -497,8 +491,8 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">St. Augustine</h1>' +
     '<div id="bodyContent">' +
-    "<p>St. Augustine is a city in the Southeastern United States, on the Atlantic coast of northeastern Florida. Founded in 1565 by Spanish explorers, it is the oldest continuously-inhabited European-established settlement in what is now the contiguous United States." +
-    "Source: https://en.wikipedia.org/wiki/St._Augustine,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $746</p> \n <p>1 bedroom: $921</p> \n <p>2 bedroom: $1113</p> \n <p>3 bedroom: $1455 </p> \n" +
+    "<p>4 bedroom: $1852</p>"
   "</div>" +
     "</div>";
 
@@ -509,8 +503,30 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Panama City</h1>' +
     '<div id="bodyContent">' +
-    "<p>Panama City is a city in and the county seat of Bay County, Florida, United States. Located along U.S. Route 98, it is the largest city between Tallahassee and Pensacola." +
-    "Source: https://en.wikipedia.org/wiki/Panama_City,_Florida</p >"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $855</p> \n <p>1 bedroom: $933</p> \n <p>2 bedroom: $1088</p> \n <p>3 bedroom: $1515 </p> \n" +
+    "<p>4 bedroom: $1784</p>"
+  "</div>" +
+    "</div>";
+
+  const info_FortMyers =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Fort Myers</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $931</p> \n <p>1 bedroom: $951</p> \n <p>2 bedroom: $1197</p> \n <p>3 bedroom: $1559 </p> \n" +
+    "<p>4 bedroom: $1762</p>"
+  "</div>" +
+    "</div>";
+
+  const info_Pensacola =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Pensacola</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $776</p> \n <p>1 bedroom: $840</p> \n <p>2 bedroom: $987</p> \n <p>3 bedroom: $1385 </p> \n" +
+    "<p>4 bedroom: $1709</p>"
   "</div>" +
     "</div>";
 
@@ -867,6 +883,32 @@ function initMap() {
     });
   });
   //PanamaCity Info Window
+
+  //FortMyers Info Window
+  const infowindow_FortMyers = new google.maps.InfoWindow({
+    content: info_FortMyers,
+  });
+  m_FortMyers.addListener("click", () => {
+    infowindow_FortMyers.open({
+      anchor: m_FortMyers,
+      map,
+      shouldFocus: false,
+    });
+  });
+  //FortMyers Info Window
+
+  //Pensacola Info Window
+  const infowindow_Pensacola = new google.maps.InfoWindow({
+    content: info_Pensacola,
+  });
+  m_Pensacola.addListener("click", () => {
+    infowindow_Pensacola.open({
+      anchor: m_Pensacola,
+      map,
+      shouldFocus: false,
+    });
+  });
+  //Pensacola Info Window
 }
 
 
