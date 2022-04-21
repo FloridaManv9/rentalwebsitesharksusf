@@ -202,336 +202,34 @@ function initMap() {
     title: "FortMyers",
   });
 
-  const info_Jacksonville =
-    '<div id="content">' +
+   var ajax = new XMLHttpRequest();
+  var method = "GET";
+  var url = "cityavg.php";
+  var asynchronous = true;
+  var data;
+var jville0BR;
+var jville1BR;
+var jville2BR;
+var jville3BR;
+var jville4BR;
+  
+  ajax.open(method, url, asynchronous);
+  ajax.send();
+  ajax.onreadystatechange = async function(){
+	  if (this.readyState == 4 && this.status == 200)
+	  {
+		  data = JSON.parse(this.responseText);
+		  console.log(data);
+		  info_Jacksonville = '<div id="content">' +
     '<div id="siteNotice">' +
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Jacksonville</h1>' +
     '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $746</p> \n <p>1 bedroom: $921</p> \n <p>2 bedroom: $1113</p> \n <p>3 bedroom: $1455 </p> \n" +
-    "<p>4 bedroom: $1852</p>"
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[0]["0BR"] + "</p> \n <p>1 bedroom: $" + data[0]["1BR"] + "</p> \n <p>2 bedroom: $" + data[0]["2BR"] + "</p> \n <p>3 bedroom: $" + data[0]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[0]["4BR"] + "</p>"
   "</div>" +
     "</div>";
-
-
-  const info_Miami =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Miami</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $1057</p> \n <p>1 bedroom: $1231</p> \n <p>2 bedroom: $1551</p> \n <p>3 bedroom: $2068 </p> \n" +
-    "<p>4 bedroom: $2483</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_Tampa =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Tampa</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
-    "<p>4 bedroom: $2028</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_Orlando =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Orlando</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $1055</p> \n <p>1 bedroom: $1140</p> \n <p>2 bedroom: $1321</p> \n <p>3 bedroom: $1713 </p> \n" +
-    "<p>4 bedroom: $2057</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_StPetersburg =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">St.Petersburg</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
-    "<p>4 bedroom: $2028</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_Hialeah =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Hialeah</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $1057</p> \n <p>1 bedroom: $1231</p> \n <p>2 bedroom: $1551</p> \n <p>3 bedroom: $2068 </p> \n" +
-    "<p>4 bedroom: $2483</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_PortStLucie =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Port St. Lucie</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $926</p> \n <p>1 bedroom: $932</p> \n <p>2 bedroom: $1211</p> \n <p>3 bedroom: $1618 </p> \n" +
-    "<p>4 bedroom: $1830</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_Tallahasse =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Tallahasse</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $778</p> \n <p>1 bedroom: $843</p> \n <p>2 bedroom: $1024</p> \n <p>3 bedroom: $1361 </p> \n" +
-    "<p>4 bedroom: $1484</p>"
-  "</div>" +
-    "</div>";
-
-
-
-  const info_FortLauderdale =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Fort Lauderdale</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $1059</p> \n <p>1 bedroom: $1198</p> \n <p>2 bedroom: $1510</p> \n <p>3 bedroom: $2161 </p> \n" +
-    "<p>4 bedroom: $2614</p>"
-  "</div>" +
-    "</div>";
-
-
-
-
-
-  const info_Hollywood =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Hollywood</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $1059</p> \n <p>1 bedroom: $1198</p> \n <p>2 bedroom: $1510</p> \n <p>3 bedroom: $2161 </p> \n" +
-    "<p>4 bedroom: $2614</p>"
-  "</div>" +
-    "</div>";
-
-
-
-  const info_Gainesville =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Gainesville</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $805</p> \n <p>1 bedroom: $897</p> \n <p>2 bedroom: $1083</p> \n <p>3 bedroom: $1415 </p> \n" +
-    "<p>4 bedroom: $1469</p>"
-  "</div>" +
-    "</div>";
-
-
-
-
-  const info_LehighAcres =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Lehigh Acres</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $931</p> \n <p>1 bedroom: $951</p> \n <p>2 bedroom: $1197</p> \n <p>3 bedroom: $1559 </p> \n" +
-    "<p>4 bedroom: $1762</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_Clearwater =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Clearwater</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
-    "<p>4 bedroom: $2028</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_Brandon =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Brandon</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
-    "<p>4 bedroom: $2028</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_Palmbay =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Palmbay</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $759</p> \n <p>1 bedroom: $921</p> \n <p>2 bedroom: $1134</p> \n <p>3 bedroom: $1525 </p> \n" +
-    "<p>4 bedroom: $1826</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_Springhill =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Springhill</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
-    "<p>4 bedroom: $2028</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_PompanoBeach =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Pompano Beach</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $1059</p> \n <p>1 bedroom: $1198</p> \n <p>2 bedroom: $1510</p> \n <p>3 bedroom: $2161 </p> \n" +
-    "<p>4 bedroom: $2614</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_WestPalmBeach =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">West Palm Beach</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $983</p> \n <p>1 bedroom: $1180</p> \n <p>2 bedroom: $1468</p> \n <p>3 bedroom: $1984 </p> \n" +
-    "<p>4 bedroom: $2387</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_Lakeland =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Lakeland</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $794</p> \n <p>1 bedroom: $799</p> \n <p>2 bedroom: $1023</p> \n <p>3 bedroom: $1375 </p> \n" +
-    "<p>4 bedroom: $1764</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_Riverview =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Riverview</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $989</p> \n <p>1 bedroom: $1040</p> \n <p>2 bedroom: $1271</p> \n <p>3 bedroom: $1651 </p> \n" +
-    "<p>4 bedroom: $2028</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_BocaRaton =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Boca Raton</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $983</p> \n <p>1 bedroom: $1180</p> \n <p>2 bedroom: $1468</p> \n <p>3 bedroom: $1984 </p> \n" +
-    "<p>4 bedroom: $2387</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_Ocala =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Ocala</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $692</p> \n <p>1 bedroom: $757</p> \n <p>2 bedroom: $939</p> \n <p>3 bedroom: $1266 </p> \n" +
-    "<p>4 bedroom: $1356</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_DaytonaBeach =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Daytona Beach</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $693</p> \n <p>1 bedroom: $856</p> \n <p>2 bedroom: $1050</p> \n <p>3 bedroom: $1406 </p> \n" +
-    "<p>4 bedroom: $1537</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_StAugustine =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">St. Augustine</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $746</p> \n <p>1 bedroom: $921</p> \n <p>2 bedroom: $1113</p> \n <p>3 bedroom: $1455 </p> \n" +
-    "<p>4 bedroom: $1852</p>"
-  "</div>" +
-    "</div>";
-
-
-  const info_PanamaCity =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Panama City</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $855</p> \n <p>1 bedroom: $933</p> \n <p>2 bedroom: $1088</p> \n <p>3 bedroom: $1515 </p> \n" +
-    "<p>4 bedroom: $1784</p>"
-  "</div>" +
-    "</div>";
-
-  const info_FortMyers =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Fort Myers</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $931</p> \n <p>1 bedroom: $951</p> \n <p>2 bedroom: $1197</p> \n <p>3 bedroom: $1559 </p> \n" +
-    "<p>4 bedroom: $1762</p>"
-  "</div>" +
-    "</div>";
-
-  const info_Pensacola =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Pensacola</h1>' +
-    '<div id="bodyContent">' +
-    "<p>Average Rent</p>  \n <p>0 bedroom: $776</p> \n <p>1 bedroom: $840</p> \n <p>2 bedroom: $987</p> \n <p>3 bedroom: $1385 </p> \n" +
-    "<p>4 bedroom: $1709</p>"
-  "</div>" +
-    "</div>";
-
-  //Jacksonville Info window
-  const infowindow_Jacksonville = new google.maps.InfoWindow({
+	let infowindow_Jacksonville = new google.maps.InfoWindow({
     content: info_Jacksonville,
   });
   m_Jacksonville.addListener("click", () => {
@@ -541,11 +239,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Jacksonville Info Window
-
-
-  //Miami Info Window
-  const infowindow_Miami = new google.maps.InfoWindow({
+  let info_Miami =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Miami</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[1]["0BR"] + "</p> \n <p>1 bedroom: $" + data[1]["1BR"] + "</p> \n <p>2 bedroom: $" + data[1]["2BR"] + "</p> \n <p>3 bedroom: $" + data[1]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[1]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Miami = new google.maps.InfoWindow({
     content: info_Miami,
   });
   m_Miami.addListener("click", () => {
@@ -555,10 +259,16 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Miami Info Window
-
-
-  //Tampa Info Window
+  let info_Tampa =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Tampa</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[2]["0BR"] + "</p> \n <p>1 bedroom: $" + data[2]["1BR"] + "</p> \n <p>2 bedroom: $" + data[2]["2BR"] + "</p> \n <p>3 bedroom: $" + data[2]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[2]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
   const infowindow_Tampa = new google.maps.InfoWindow({
     content: info_Tampa,
   });
@@ -569,11 +279,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Tampa Info Window
-
-
-  //Orlando Info Window
-  const infowindow_Orlando = new google.maps.InfoWindow({
+  let info_Orlando =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Orlando</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[3]["0BR"] + "</p> \n <p>1 bedroom: $" + data[3]["1BR"] + "</p> \n <p>2 bedroom: $" + data[3]["2BR"] + "</p> \n <p>3 bedroom: $" + data[3]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[3]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Orlando = new google.maps.InfoWindow({
     content: info_Orlando,
   });
   m_Orlando.addListener("click", () => {
@@ -583,11 +299,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Orlando Info Window
-
-
-  //StPetersburg Info Window
-  const infowindow_StPetersBurg = new google.maps.InfoWindow({
+   const info_StPetersburg =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">St.Petersburg</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[4]["0BR"] + "</p> \n <p>1 bedroom: $" + data[4]["1BR"] + "</p> \n <p>2 bedroom: $" + data[4]["2BR"] + "</p> \n <p>3 bedroom: $" + data[4]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[4]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_StPetersBurg = new google.maps.InfoWindow({
     content: info_StPetersburg,
   });
   m_StPetersburg.addListener("click", () => {
@@ -597,11 +319,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //StPetersburg Info Window
-
-
-  //Hialeah Info Window
-  const infowindow_Hialeah = new google.maps.InfoWindow({
+  const info_Hialeah =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Hialeah</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[5]["0BR"] + "</p> \n <p>1 bedroom: $" + data[5]["1BR"] + "</p> \n <p>2 bedroom: $" + data[5]["2BR"] + "</p> \n <p>3 bedroom: $" + data[5]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[5]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Hialeah = new google.maps.InfoWindow({
     content: info_Hialeah,
   });
   m_Hialeah.addListener("click", () => {
@@ -611,11 +339,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Hialeah Info Window
-
-
-  //PortStLucie Info Window
-  const infowindow_PortStLucie = new google.maps.InfoWindow({
+  const info_PortStLucie =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Port St. Lucie</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[6]["0BR"] + "</p> \n <p>1 bedroom: $" + data[6]["1BR"] + "</p> \n <p>2 bedroom: $" + data[6]["2BR"] + "</p> \n <p>3 bedroom: $" + data[6]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[6]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_PortStLucie = new google.maps.InfoWindow({
     content: info_PortStLucie,
   });
   m_PortStLucie.addListener("click", () => {
@@ -625,11 +359,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //PortStLucie Info Window
-
-
-  //Tallahasse Info Window
-  const infowindow_Tallahasse = new google.maps.InfoWindow({
+   const info_Tallahasse =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Tallahasse</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[7]["0BR"] + "</p> \n <p>1 bedroom: $" + data[7]["1BR"] + "</p> \n <p>2 bedroom: $" + data[7]["2BR"] + "</p> \n <p>3 bedroom: $" + data[7]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[7]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Tallahasse = new google.maps.InfoWindow({
     content: info_Tallahasse,
   });
   m_Tallahasse.addListener("click", () => {
@@ -639,11 +379,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Tallahasse Info Window
-
-
-  //FortLauderdale Info Window
-  const infowindow_FortLauderdale = new google.maps.InfoWindow({
+  const info_FortLauderdale =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Fort Lauderdale</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[8]["0BR"] + "</p> \n <p>1 bedroom: $" + data[8]["1BR"] + "</p> \n <p>2 bedroom: $" + data[8]["2BR"] + "</p> \n <p>3 bedroom: $" + data[8]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[8]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_FortLauderdale = new google.maps.InfoWindow({
     content: info_FortLauderdale,
   });
   m_FortLauderdale.addListener("click", () => {
@@ -653,14 +399,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //FortLauderdale Info Window
-
-
-
-
-
-  //Hollywood Info Window
-  const infowindow_Hollywood = new google.maps.InfoWindow({
+  const info_Hollywood =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Hollywood</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[9]["0BR"] + "</p> \n <p>1 bedroom: $" + data[9]["1BR"] + "</p> \n <p>2 bedroom: $" + data[9]["2BR"] + "</p> \n <p>3 bedroom: $" + data[9]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[9]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Hollywood = new google.maps.InfoWindow({
     content: info_Hollywood,
   });
   m_Hollywood.addListener("click", () => {
@@ -670,12 +419,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-
-
-
-
-  //Gainesville Info Window
-  const infowindow_Gainesville = new google.maps.InfoWindow({
+  const info_Gainesville =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Gainesville</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[10]["0BR"] + "</p> \n <p>1 bedroom: $" + data[10]["1BR"] + "</p> \n <p>2 bedroom: $" + data[10]["2BR"] + "</p> \n <p>3 bedroom: $" + data[10]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[10]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Gainesville = new google.maps.InfoWindow({
     content: info_Gainesville,
   });
   m_Gainesville.addListener("click", () => {
@@ -685,13 +439,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Gainesville Info Window
-
-
-
-
-  //LehighAcres Info Window
-  const infowindow_LehighAcres = new google.maps.InfoWindow({
+  const info_LehighAcres =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Lehigh Acres</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[11]["0BR"] + "</p> \n <p>1 bedroom: $" + data[11]["1BR"] + "</p> \n <p>2 bedroom: $" + data[11]["2BR"] + "</p> \n <p>3 bedroom: $" + data[11]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[11]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_LehighAcres = new google.maps.InfoWindow({
     content: info_LehighAcres,
   });
   m_LehighAcres.addListener("click", () => {
@@ -701,11 +459,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //LehighAcres Info Window
-
-
-  //Clearwater Info Window
-  const infowindow_Clearwater = new google.maps.InfoWindow({
+  const info_Clearwater =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Clearwater</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[12]["0BR"] + "</p> \n <p>1 bedroom: $" + data[12]["1BR"] + "</p> \n <p>2 bedroom: $" + data[12]["2BR"] + "</p> \n <p>3 bedroom: $" + data[12]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[12]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Clearwater = new google.maps.InfoWindow({
     content: info_Clearwater,
   });
   m_Clearwater.addListener("click", () => {
@@ -715,11 +479,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Clearwater Info Window
-
-
-  //Brandon Info Window
-  const infowindow_Brandon = new google.maps.InfoWindow({
+  const info_Brandon =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Brandon</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[13]["0BR"] + "</p> \n <p>1 bedroom: $" + data[13]["1BR"] + "</p> \n <p>2 bedroom: $" + data[13]["2BR"] + "</p> \n <p>3 bedroom: $" + data[13]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[13]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Brandon = new google.maps.InfoWindow({
     content: info_Brandon,
   });
   m_Brandon.addListener("click", () => {
@@ -729,11 +499,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Brandon Info Window
-
-
-  //Palmbay Info Window
-  const infowindow_Palmbay = new google.maps.InfoWindow({
+   const info_Palmbay =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Palmbay</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[14]["0BR"] + "</p> \n <p>1 bedroom: $" + data[14]["1BR"] + "</p> \n <p>2 bedroom: $" + data[14]["2BR"] + "</p> \n <p>3 bedroom: $" + data[14]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[14]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Palmbay = new google.maps.InfoWindow({
     content: info_Palmbay,
   });
   m_Palmbay.addListener("click", () => {
@@ -743,11 +519,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Palmbay Info Window
-
-
-  //Springhill Info Window
-  const infowindow_Springhill = new google.maps.InfoWindow({
+   const info_Springhill =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Springhill</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[15]["0BR"] + "</p> \n <p>1 bedroom: $" + data[15]["1BR"] + "</p> \n <p>2 bedroom: $" + data[15]["2BR"] + "</p> \n <p>3 bedroom: $" + data[15]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[15]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	 const infowindow_Springhill = new google.maps.InfoWindow({
     content: info_Springhill,
   });
   m_Springhill.addListener("click", () => {
@@ -757,11 +539,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Springhill Info Window
-
-
-  //PompanoBeach Info Window
-  const infowindow_PompanoBeach = new google.maps.InfoWindow({
+  const info_PompanoBeach =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Pompano Beach</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[16]["0BR"] + "</p> \n <p>1 bedroom: $" + data[16]["1BR"] + "</p> \n <p>2 bedroom: $" + data[16]["2BR"] + "</p> \n <p>3 bedroom: $" + data[16]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[16]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_PompanoBeach = new google.maps.InfoWindow({
     content: info_PompanoBeach,
   });
   m_PompanoBeach.addListener("click", () => {
@@ -771,11 +559,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //PompanoBeach Info Window
-
-
-  //WestPalmBeach Info Window
-  const infowindow_WestPalmBeach = new google.maps.InfoWindow({
+  const info_WestPalmBeach =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">West Palm Beach</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[17]["0BR"] + "</p> \n <p>1 bedroom: $" + data[17]["1BR"] + "</p> \n <p>2 bedroom: $" + data[17]["2BR"] + "</p> \n <p>3 bedroom: $" + data[17]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[17]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_WestPalmBeach = new google.maps.InfoWindow({
     content: info_WestPalmBeach,
   });
   m_WestPalmBeach.addListener("click", () => {
@@ -785,11 +579,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //WestPalmBeach Info Window
-
-
-  //Lakeland Info Window
-  const infowindow_Lakeland = new google.maps.InfoWindow({
+  const info_Lakeland =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Lakeland</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[18]["0BR"] + "</p> \n <p>1 bedroom: $" + data[18]["1BR"] + "</p> \n <p>2 bedroom: $" + data[18]["2BR"] + "</p> \n <p>3 bedroom: $" + data[18]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[18]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Lakeland = new google.maps.InfoWindow({
     content: info_Lakeland,
   });
   m_Lakeland.addListener("click", () => {
@@ -799,11 +599,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Lakeland Info Window
-
-
-  //Riverview Info Window
-  const infowindow_Riverview = new google.maps.InfoWindow({
+   const info_Riverview =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Riverview</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[19]["0BR"] + "</p> \n <p>1 bedroom: $" + data[19]["1BR"] + "</p> \n <p>2 bedroom: $" + data[19]["2BR"] + "</p> \n <p>3 bedroom: $" + data[19]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[19]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Riverview = new google.maps.InfoWindow({
     content: info_Riverview,
   });
   m_Riverview.addListener("click", () => {
@@ -813,11 +619,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Riverview Info Window
-
-
-  //BocaRaton Info Window
-  const infowindow_BocaRaton = new google.maps.InfoWindow({
+   const info_BocaRaton =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Boca Raton</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[20]["0BR"] + "</p> \n <p>1 bedroom: $" + data[20]["1BR"] + "</p> \n <p>2 bedroom: $" + data[20]["2BR"] + "</p> \n <p>3 bedroom: $" + data[20]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[20]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_BocaRaton = new google.maps.InfoWindow({
     content: info_BocaRaton,
   });
   m_Bocaraton.addListener("click", () => {
@@ -827,11 +639,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //BocaRaton Info Window
-
-
-  //Ocala Info Window
-  const infowindow_Ocala = new google.maps.InfoWindow({
+  const info_Ocala =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Ocala</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[21]["0BR"] + "</p> \n <p>1 bedroom: $" + data[21]["1BR"] + "</p> \n <p>2 bedroom: $" + data[21]["2BR"] + "</p> \n <p>3 bedroom: $" + data[21]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[21]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Ocala = new google.maps.InfoWindow({
     content: info_Ocala,
   });
   m_Ocala.addListener("click", () => {
@@ -841,11 +659,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Ocala Info Window
-
-
-  //DaytonaBeach Info Window
-  const infowindow_DaytonaBeach = new google.maps.InfoWindow({
+  const info_DaytonaBeach =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Daytona Beach</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[22]["0BR"] + "</p> \n <p>1 bedroom: $" + data[22]["1BR"] + "</p> \n <p>2 bedroom: $" + data[22]["2BR"] + "</p> \n <p>3 bedroom: $" + data[22]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[22]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_DaytonaBeach = new google.maps.InfoWindow({
     content: info_DaytonaBeach,
   });
   m_DaytonaBeach.addListener("click", () => {
@@ -855,10 +679,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-
-
-  //StAugustine Info Window
-  const infowindow_StAugustine = new google.maps.InfoWindow({
+  const info_StAugustine =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">St. Augustine</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[23]["0BR"] + "</p> \n <p>1 bedroom: $" + data[23]["1BR"] + "</p> \n <p>2 bedroom: $" + data[23]["2BR"] + "</p> \n <p>3 bedroom: $" + data[23]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[23]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+const infowindow_StAugustine = new google.maps.InfoWindow({
     content: info_StAugustine,
   });
   m_StAugustine.addListener("click", () => {
@@ -868,11 +699,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //StAugustine Info Window
-
-
-  //PanamaCity Info Window
-  const infowindow_PanamaCity = new google.maps.InfoWindow({
+  const info_PanamaCity =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Panama City</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[24]["0BR"] + "</p> \n <p>1 bedroom: $" + data[24]["1BR"] + "</p> \n <p>2 bedroom: $" + data[24]["2BR"] + "</p> \n <p>3 bedroom: $" + data[24]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[24]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_PanamaCity = new google.maps.InfoWindow({
     content: info_PanamaCity,
   });
   m_PanamaCity.addListener("click", () => {
@@ -882,10 +719,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //PanamaCity Info Window
-
-  //FortMyers Info Window
-  const infowindow_FortMyers = new google.maps.InfoWindow({
+  const info_FortMyers =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Fort Myers</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[25]["0BR"] + "</p> \n <p>1 bedroom: $" + data[25]["1BR"] + "</p> \n <p>2 bedroom: $" + data[25]["2BR"] + "</p> \n <p>3 bedroom: $" + data[25]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[25]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_FortMyers = new google.maps.InfoWindow({
     content: info_FortMyers,
   });
   m_FortMyers.addListener("click", () => {
@@ -895,10 +739,17 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //FortMyers Info Window
-
-  //Pensacola Info Window
-  const infowindow_Pensacola = new google.maps.InfoWindow({
+  const info_Pensacola =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Pensacola</h1>' +
+    '<div id="bodyContent">' +
+    "<p>Average Rent</p>  \n <p>0 bedroom: $" + data[26]["0BR"] + "</p> \n <p>1 bedroom: $" + data[26]["1BR"] + "</p> \n <p>2 bedroom: $" + data[26]["2BR"] + "</p> \n <p>3 bedroom: $" + data[26]["3BR"] + " </p> \n" +
+    "<p>4 bedroom: $" + data[26]["4BR"] + "</p>"
+  "</div>" +
+    "</div>";
+	const infowindow_Pensacola = new google.maps.InfoWindow({
     content: info_Pensacola,
   });
   m_Pensacola.addListener("click", () => {
@@ -908,7 +759,16 @@ function initMap() {
       shouldFocus: false,
     });
   });
-  //Pensacola Info Window
+	  }
+	  
+  }
+  
+	
+	
+
+  
+
+
 }
 
 
