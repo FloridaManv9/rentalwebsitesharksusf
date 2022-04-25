@@ -141,6 +141,12 @@ body {
 .cover-container {
   max-width: 42em;
 }
+#bodyContent img{
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+
+}
 
 
 /*
