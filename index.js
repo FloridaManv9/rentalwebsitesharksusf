@@ -26,6 +26,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 27.7567667, lng: -81.4639835 },
     zoom: 7,
+	mapId: 'c7120f43ab9b088b',
     restriction: {
       latLngBounds: {
         north: 34.5,
@@ -69,162 +70,189 @@ function initMap() {
    const m_Jacksonville = new google.maps.Marker({
     position: Jacksonville,
     map,
+	animation: google.maps.Animation.DROP,
 	icon: "img/jacksonvilleicon.png",
     title: "Jacksonville",
   });
   const m_Miami = new google.maps.Marker({
     position: Miami,
 	icon: "img/miamiicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Miami",
   });
   const m_Tampa = new google.maps.Marker({
     position: Tampa,
 	icon: "img/tampaicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Tampa",
   });
   const m_Orlando = new google.maps.Marker({
     position: Orlando,
 	icon: "img/orlandoicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Orlando",
   });
   const m_StPetersburg = new google.maps.Marker({
     position: StPetersburg,
 	icon: "img/stpetersburgicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "StPetersburg",
   });
   const m_Hialeah = new google.maps.Marker({
     position: Hialeah,
 	icon: "img/hialeahicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Hialeah",
   });
   const m_PortStLucie = new google.maps.Marker({
     position: PortStLucie,
 	icon: "img/portstlucieicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "PortStLucie",
   });
   const m_Tallahasse = new google.maps.Marker({
     position: Tallahasse,
 	icon: "img/tallahasseeicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Tallahasse",
   });
   const m_FortLauderdale = new google.maps.Marker({
     position: FortLauderdale,
 	icon: "img/ftlauderdaleicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "FortLauderdale",
   });
   const m_Hollywood = new google.maps.Marker({
     position: Hollywood,
 	icon: "img/hollywoodicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Hollywood",
   });
   const m_Gainesville = new google.maps.Marker({
     position: Gainesville,
 	icon: "img/gainesvilleicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Gainesville",
   });
   const m_LehighAcres = new google.maps.Marker({
     position: LehighAcres,
 	icon: "img/lehighacresicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "LehighAcres",
   });
   const m_Clearwater = new google.maps.Marker({
     position: Clearwater,
 	icon: "img/clearwatericon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Clearwater",
   });
   const m_Brandon = new google.maps.Marker({
     position: Brandon,
 	icon: "img/brandonicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Brandon ",
   });
   const m_Palmbay = new google.maps.Marker({
     position: Palmbay,
 	icon: "img/palmbayicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Palmbay",
   });
   const m_Springhill = new google.maps.Marker({
     position: Springhill,
 	icon: "img/springhillicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "SpringHill",
   });
   const m_PompanoBeach = new google.maps.Marker({
     position: PompanoBeach,
 	icon: "img/pompanobeachicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "PompanoBeach",
   });
   const m_WestPalmBeach = new google.maps.Marker({
     position: WestPalmBeach,
 	icon: "img/westpalmbeachicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "WestPalmBeach",
   });
   const m_Lakeland = new google.maps.Marker({
     position: Lakeland,
 	icon: "img/lakelandicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Lakeland",
   });
   const m_Riverview = new google.maps.Marker({
     position: Riverview,
 	icon: "img/riverviewicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Riverview",
   });
   const m_Bocaraton = new google.maps.Marker({
     position: Bocaraton,
 	icon: "img/bocaratonicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Bocaraton",
   });
   const m_Ocala = new google.maps.Marker({
     position: Ocala,
 	icon: "img/ocalaicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Ocala",
   });
   const m_DaytonaBeach = new google.maps.Marker({
     position: DaytonaBeach,
 	icon: "img/daytonabeachicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "DaytonaBeach",
   });
   const m_StAugustine = new google.maps.Marker({
     position: StAugustine,
 	icon: "img/staugustineicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "StAugustine",
   });
   const m_PanamaCity = new google.maps.Marker({
     position: PanamaCity,
 	icon: "img/panamacityicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "PanamaCity",
   });
   const m_Pensacola = new google.maps.Marker({
     position: Pensacola,
 	icon:"img/pensacolaicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "Pensacola",
   });
   const m_FortMyers = new google.maps.Marker({
     position: FortMyers,
 	icon:"img/ftmyersicon.png",
+	animation: google.maps.Animation.DROP,
     map,
     title: "FortMyers",
   });

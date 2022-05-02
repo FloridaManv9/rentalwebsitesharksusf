@@ -174,3 +174,6 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+#map img:hover{
+	  opacity: 0.5;
+}
