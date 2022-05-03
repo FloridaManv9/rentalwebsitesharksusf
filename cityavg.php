@@ -3,7 +3,7 @@ error_reporting(E_ERROR | E_PARSE);
 header('Content-Type: application/json; charset=utf-8');
 $servername = "localhost";
 $username = "root";
-$password = "password";
+$password = "";
 $db = "rentalsitedb";
 $city_name = $_request[""];
 
@@ -15,7 +15,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "Select 0BR, 1BR, 2BR, 3BR, 4BR FROM average_rent_prices";
+$sql = "Select 0BR, 1BR, 2BR, 3BR, 4BR, avg, percent_delta_20to21 FROM average_rent_prices";
 $result = $conn->query($sql);
 $data = array();
 
